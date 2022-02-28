@@ -1,4 +1,5 @@
 ﻿using System;
+using RPG.src.Entities;
 
 namespace RPG
 {
@@ -6,7 +7,11 @@ namespace RPG
   {
     static void Main(string[] args)
     {
-      Console.WriteLine("Hello, World!");
+      Hero hero = new Hero("Arus", 42, "Knight");
+      Wizard wizard = new Wizard("Jenica", 42, "White Wizard");
+
+      Console.WriteLine(hero.Attack());
+      Console.WriteLine(wizard.Attack(1));
     }
   }
 }
