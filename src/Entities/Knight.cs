@@ -1,8 +1,8 @@
 namespace RPG.src.Entities
 {
-    public class Wizard : Character
+    public class Knight : Character
     {
-        public Wizard(
+        public Knight(
           string Name,
           int Level,
           string HeroType,
@@ -25,21 +25,24 @@ namespace RPG.src.Entities
 
         public override string Attack()
         {
-            return base.Name + " Usou magia de ataque!";
+            return base.Name + " Atacou com sua espada!";
         }
 
         public string Attack(int Bonus)
         {
-            if(Bonus > 6){
-                return base.Name + " lançou magia de Alto Grau com dano de " + Bonus;
-            }else{
-                return base.Name + " lançou magia com dano de " + Bonus;
+            if(Bonus < 10){
+                return base.Name + " fez um ataque fraco +" + Bonus + " de dano";
+            }else if(Bonus >= 10 || Bonus < 50){
+                return base.Name + " fez um ataque forte +" + Bonus + " de dano";
+            }else if(Bonus >= 50){
+                return base.Name + " fez um ataque sem defesa +" + Bonus + " de dano";
             }
+            return null;
         }
 
         public override string Defend()
         {
-            return this.Name + " Usou magia de defesa!";
+            return this.Name + " Defendeu com seu escudo!";
         }
     }
 }
