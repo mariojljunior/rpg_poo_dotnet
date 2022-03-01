@@ -22,7 +22,7 @@ namespace RPG
       // Console.WriteLine(hero.Defend());
       // Console.WriteLine(ninja.Attack());
       // Console.WriteLine(ninja.Defend());
-      // Console.WriteLine(whiteWizard.Attack());
+      Console.WriteLine(whiteWizard.Attack(60));
       // Console.WriteLine(whiteWizard.Defend());
       // Console.WriteLine(blackWizard.Attack());
       // Console.WriteLine(blackWizard.Defend());

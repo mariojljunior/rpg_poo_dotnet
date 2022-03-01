@@ -32,7 +32,7 @@ namespace RPG.src.Entities
         {
             if(Bonus < 10){
                 return base.Name + " fez um ataque fraco +" + Bonus + " de dano";
-            }else if(Bonus >= 10 || Bonus < 50){
+            }else if(Bonus >= 10 && Bonus < 50){
                 return base.Name + " fez um ataque forte +" + Bonus + " de dano";
             }else if(Bonus >= 50){
                 return base.Name + " fez um ataque sem defesa +" + Bonus + " de dano";

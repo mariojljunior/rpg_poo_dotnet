@@ -30,11 +30,14 @@ namespace RPG.src.Entities
 
         public string Attack(int Bonus)
         {
-            if(Bonus > 6){
-                return base.Name + " lançou magia de Alto Grau com dano de " + Bonus;
-            }else{
-                return base.Name + " lançou magia com dano de " + Bonus;
+            if(Bonus < 10){
+                return base.Name + " lançou uma magia simples +" + Bonus + " de dano";
+            }else if(Bonus >= 10 && Bonus < 50){
+                return base.Name + " lançou uma magia forte +" + Bonus + " de dano";
+            }else if(Bonus >= 50){
+                return base.Name + " lançou uma magia de grande area +" + Bonus + " de dano";
             }
+            return null;
         }
 
         public override string Defend()
